@@ -1,43 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lab 6</title>
+    <title>Lab 7</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
+        .content {
             padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
         }
-        .container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            transition: flex-direction 10s ease-in-out;
+        .carousel-item {
+            height: 400px;
+            color: white;
+            text-align: center;
         }
-        .image {
-            width: 350px;
-            height: 350px;
-            margin: 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
+        .carousel-item:nth-child(1) {
+            background-color: #007bff;
         }
-        .image:hover {
-            transform: scale(1.1);
+        .carousel-item:nth-child(2) {
+            background-color: #28a745;
+        }
+        .carousel-item:nth-child(3) {
+            background-color: #dc3545;
+        }
+        .carousel-caption {
+            bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <h1 style="text-align: center;">Приклад</h1>
-
-    <div class="container">
-        <img src="image/one.jpg" alt="Image 1" class="image">
-        <img src="image/one.jpg" alt="Image 2" class="image">
-        <img src="image/one.jpg" alt="Image 3" class="image">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="content">
+                    <h2>Колонка 1</h2>
+                    <p>Тут знаходиться контент для першої колонки.</p>
+                    <button type="button" class="btn btn-primary">Кнопка 1</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="content">
+                    <h2>Колонка 2</h2>
+                    <p>Тут знаходиться контент для другої колонки.</p>
+                    <button type="button" class="btn btn-success">Кнопка 2</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="content">
+                    <h2>Колонка 3</h2>
+                    <p>Тут знаходиться контент для третьої колонки.</p>
+                    <button type="button" class="btn btn-danger">Кнопка 3</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="carouselExampleIndicators" class="carousel slide mt-custom" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-block w-100"></div>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Слайд 1</h5>
+                        <p>Опис першого слайда.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-block w-100"></div>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Слайд 2</h5>
+                        <p>Опис другого слайда.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-block w-100"></div>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Слайд 3</h5>
+                        <p>Опис третього слайда.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+        </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
