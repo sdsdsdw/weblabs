@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 8</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            overflow-x: auto;
+            max-width: 100%;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            box-sizing: border-box;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <h1>Task</h1>
+    <div class="task_one">
+        <p>Task 1</p>
+        <pre><code class="javascript">
+            /* 
+                Є рядок "I am in the KPI". Зробити перші літери у кожному слові у верхньому регістрі. 
+                Використовувати for або while
+            */
+            
+            let str1 = "I am in the KPI";
+            let words = str1.split(" ");
+            for (let i = 0; i < words.length; i++) {
+                words[i] = words[i][0].toUpperCase() + words[i].substring(1);
+            }
+            let result1 = words.join(" ");
+            console.log(result1);  // Output: "I Am In The KPI"            
+        </code></pre>
+    </div>
+
+    <div class="task_two">
+        <p>Task 2</p>
+        <pre><code class="javascript">
+            /* 
+                Є рядок "tseb eht ma i". Використовуючи цикли, зробити зворотний рядок, 
+                (тобто остання літера стає першою, передостання - другою і.т.д.)
+            */
+            
+            let str2 = "tseb eht ma i";
+            let reversedStr2 = "";
+            for (let i = str2.length - 1; i >= 0; i--) {
+                reversedStr2 += str2[i];
+            }
+            console.log(reversedStr2);  // Output: "i am the best"
+        </code></pre>
+    </div>
+
+    <div class="task_three">
+        <p>Task 3</p>
+        <pre><code class="javascript">
+            /* 
+                Знайти факторіал числа – від 1 до n
+                За допомогою циклів (без функції) обчислити факторіал числа 5.
+            */
+            
+            let n = 5;
+            let factorial = 1;
+            for (let i = 1; i <= n; i++) {
+                factorial *= i;
+            }
+            console.log(factorial);  // Output: 120
+        </code></pre>
+    </div>
+
+    <div class="task_four">
+        <p>Task 4</p>
+        <pre><code class="javascript">
+            /* 
+                Використовуючи цикли, створити рядок "Пишемо до 5і: 1, 2, 3, 4, 5"
+            */
+            
+            let result4 = "Пишемо до 5і: ";
+            for (let i = 1; i <= 5; i++) {
+                result4 += i;
+                if (i < 5) {
+                    result4 += ", ";
+                }
+            }
+            console.log(result4);  // Output: "Пишемо до 5і: 1, 2, 3, 4, 5"
+        </code></pre>
+    </div>
+
+    <div class="task_five">
+        <p>Task 5</p>
+        <pre><code class="javascript">
+            /* 
+                Взявши за основу рядок “JavaScript is a pretty good language” зробити новий рядок, 
+                де кожне слово починається з великої літери, а прогалини видалені
+            */
+            
+            let str5 = "JavaScript is a pretty good language";
+            let words5 = str5.split(" ");
+            for (let i = 0; i < words5.length; i++) {
+                words5[i] = words5[i][0].toUpperCase() + words5[i].substring(1);
+            }
+            let result5 = words5.join("");
+            console.log(result5);  // Output: "JavaScriptIsAPrettyGoodLanguage"
+        </code></pre>
+    </div>
+    
+    <div class="task_six">
+        <p>Task 6</p>
+        <pre><code class="javascript">
+            /* 
+                Знайти всі непарні числа від 1 до 20 включно та вивести їх у консоль.
+            */
+            
+            for (let i = 1; i <= 20; i++) {
+                if (i % 2 !== 0) {
+                    console.log(i); // 1, 3, 5, 7, 9, 11, 13, 15, 17, 19
+                }
+            }
+        </code></pre>
+    </div>
+</main>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+<script>
+    console.log("----------\n Task 1.");
+    let str1 = "I am in the KPI";
+    let words = str1.split(" ");
+    for (let i = 0; i < words.length; i++) {
+        words[i] = words[i][0].toUpperCase() + words[i].substring(1);
+    }
+    let result1 = words.join(" ");
+    console.log(result1);  // Output: "I Am In The KPI"            
+
+    console.log("----------\n Task 2.");
+    let str2 = "tseb eht ma i";
+    let reversedStr2 = "";
+    for (let i = str2.length - 1; i >= 0; i--) {
+        reversedStr2 += str2[i];
+    }
+    console.log(reversedStr2);  // Output: "i am the best"
+
+    console.log("----------\n Task 3.");
+    let n = 5;
+    let factorial = 1;
+    for (let i = 1; i <= n; i++) {
+        factorial *= i;
+    }
+    console.log(factorial);  // Output: 120
+
+    console.log("----------\n Task 4.");
+    let result4 = "Пишемо до 5і: ";
+    for (let i = 1; i <= 5; i++) {
+        result4 += i;
+        if (i < 5) {
+            result4 += ", ";
+        }
+    }
+    console.log(result4);  // Output: "Пишемо до 5і: 1, 2, 3, 4, 5"
+
+    console.log("----------\n Task 5.");
+    let str5 = "JavaScript is a pretty good language";
+    let words5 = str5.split(" ");
+    for (let i = 0; i < words5.length; i++) {
+        words5[i] = words5[i][0].toUpperCase() + words5[i].substring(1);
+    }
+    let result5 = words5.join("");
+    console.log(result5);  // Output: "JavaScriptIsAPrettyGoodLanguage"
+
+    console.log("----------\n Task 6.");
+    for (let i = 1; i <= 20; i++) {
+        if (i % 2 !== 0) {
+            console.log(i); // 1, 3, 5, 7, 9, 11, 13, 15, 17, 19
+        }
+    }
+
+    hljs.highlightAll();
+</script>
+
+</body>
+</html>
