@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Навчання науки</title>
+<style>
+  body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  #collage-container {
+    border: 2px solid #b6b6b6;
+    width: 80%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "frame1 frame3 frame4"
+      "frame2 frame3 frame5";
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #b6b6b6;
+	border-radius: 5px;
+  }
+  #frame1 {
+    grid-area: frame1;
+  }
+  #frame2 {
+    grid-area: frame2;
+  }
+  #frame3 { 
+    grid-area: frame3; 
+    overflow-y: scroll; /* Ensuring vertical scrollbar */
+  }
+  #frame4 {
+    grid-area: frame4;
+  }
+  #frame5 {
+    grid-area: frame5;
+  }
+  #marquee-container {
+    width: 100%;
+    color: #000000;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+  }
+</style>
+</head>
+<body>
+  <div id="collage-container">
+    <iframe id="frame1" src="frame1.html" name="frame1" scrolling="no"></iframe>
+    <iframe id="frame2" src="frame2.html" name="frame2" scrolling="no"></iframe>
+    <iframe id="frame3" src="frame3.html" name="frame3" scrolling="no"></iframe>
+    <iframe id="frame4" src="frame4.html" name="frame4" scrolling="yes"></iframe>
+    <iframe id="frame5" src="frame5.html" name="frame5" scrolling="no"></iframe>
+  </div>
+  <div id="marquee-container">
+    <marquee>Робота виконана студентом: Бойко Егор</marquee>
+  </div>
+</body>
+</html>

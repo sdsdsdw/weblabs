@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Творчість Шевченко</title>
+	<style>
+	body {
+		font-family: Arial, sans-serif;
+		background-color: #f9f9f9;
+		padding: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+	}
+	.form-container {
+		max-width: 600px;
+		padding: 20px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		background-color: white;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	}
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		margin-bottom: 20px;
+	}
+	table, th, td {
+		border: 1px solid #ccc;
+	}
+	th, td {
+		padding: 10px;
+		text-align: left;
+	}
+	.input-group {
+		display: flex;
+		gap: 20px;
+	}
+	.input_number {
+		width: 20%;
+		padding: 8px;
+		border-radius: 5px;
+		border: 1px solid #ccc;
+	}
+	.input_text {
+		width: 90%;
+		padding: 8px;
+		border-radius: 5px;
+		border: 1px solid #ccc;
+	}
+	.button-container {
+		margin-top: 20px;
+		text-align: center;
+	}
+	button {
+		padding: 10px 20px;
+		background-color: #4CAF50;
+		color: white;
+		border: none;
+		cursor: pointer;
+		margin: 0 5px;
+		border-radius: 5px;
+		transition: background-color 0.3s;
+	}
+	button:hover {
+		background-color: #45a049;
+	}
+	.error-message {
+		color: red;
+		margin-bottom: 15px;
+	}
+	.info {
+		resize: none;
+		overflow-y: auto;
+		width: 250px;
+		height: 70px;
+	}
+	</style>
+</head>
+<body>
+  <div class="form-container">
+    <form id="surveyForm" method="post" enctype="multipart/form-data">
+      <table>
+        <tr>
+          <td>Вопрос 1</td>
+          <td>
+            <div class="input-group">
+              <input type="number" class="input_number" name="question1" required>
+              <input type="number" class="input_number" name="question1" required>
+              <input type="number" class="input_number" name="question1" required>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Вопрос 2</td>
+          <td>
+            <select>
+              <option>Ответ 2.1</option>
+              <option>Ответ 2.2</option>
+              <option>Ответ 2.3</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Вопрос 3</td>
+          <td>
+            <div class="input-group">
+              <input type="checkbox" name="question2" required>
+              <input type="checkbox" name="question2" required>
+              <input type="checkbox" name="question2" required>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Вопрос 4</td>
+          <td>
+            <input type="text" class="input_text" name="question4_1" required>
+          </td>
+        </tr>
+        <tr>
+          <td>Вопрос 5</td>
+          <td>
+            <div class="input-group">
+              <input type="radio" name="question3" required>
+              <input type="radio" name="question3" required>
+              <input type="radio" name="question3" required>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Вопрос 6</td>
+          <td>
+            <input type="image" class="image">
+            <input type="file" class="file" required>
+          </td>
+        </tr>
+        <tr>
+          <td>Вопрос 7</td>
+          <td>
+            <fieldset>
+              <div>
+                <input type="checkbox" id="answer1" name="question7" value="answer1">
+                <label for="answer1">Ответ 7.1</label>
+              </div>
+              <div>
+                <input type="checkbox" id="answer2" name="question7" value="answer2">
+                <label for="answer2">Ответ 7.2</label>
+              </div>
+              <div>
+                <input type="checkbox" id="answer3" name="question7" value="answer3">
+                <label for="answer3">Ответ 7.3</label>
+              </div>
+              <div>
+                <input type="checkbox" id="answer4" name="question7" value="answer4">
+                <label for="answer4">Ответ 7.4</label>
+              </div>
+            </fieldset>
+          </td>
+        </tr>
+        <tr>
+          <td>Дополнительная информация</td>
+          <td>
+            <textarea name="info" class="info"></textarea>
+          </td>
+        </tr>
+      </table>
+      <div class="button-container">
+        <button type="submit">Отправить</button>
+        <button type="reset">Очистить</button>
+        <button type="button">Обновить</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
